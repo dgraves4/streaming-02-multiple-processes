@@ -87,7 +87,7 @@ Use out0.txt to document the first run.
 
 Use out3.txt to document the second run.
 
-## Task 8. Create custom process streaming script
+## Task 8. Create Custom Process Streaming Script
 
 Create and configure a custom script designed to stream data from a CSV file over a network and log the process:
 
@@ -96,21 +96,9 @@ Create and configure a custom script designed to stream data from a CSV file ove
 - Optionally, set up a virtual environment to manage dependencies:
 
 ```bash
-py -m venv .venv
-source .venv/scripts/activate
-```  
-
-## Task 8. Create Custom Process Streaming Script
-
-Create and configure a custom script designed to stream data from a CSV file over a network and log the process. Follow these detailed steps to replicate the functionality discussed:
-
-### Step 1: Set Up Your Python Environment
-- Ensure Python 3.7+ is installed on your system.
-- Optionally, set up a virtual environment to manage dependencies:
-  ```bash
-  python -m venv venv
-  source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-
+python -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+```
 ### Step 2: Script Creation
 - Open VS Code or your preferred code editor.
 - Create a new file named process_streaming_yourname.py (in this example the file is process_streaming_dgraves.py).
