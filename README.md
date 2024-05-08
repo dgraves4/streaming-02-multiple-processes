@@ -100,11 +100,6 @@ py -m venv .venv
 source .venv/scripts/activate
 ```  
 
-Certainly! To adapt Task 8 based on the details of your script, I'll break down the steps further into more precise and actionable instructions, ensuring that they align closely with the specific operations and structure of your custom streaming script. This step-by-step guide will be clear and detailed, making it easier for someone to understand and implement.
-
-Revised Task 8 with Detailed Steps
-markdown
-Copy code
 ## Task 8. Create Custom Process Streaming Script
 
 Create and configure a custom script designed to stream data from a CSV file over a network and log the process. Follow these detailed steps to replicate the functionality discussed:
@@ -191,12 +186,10 @@ Execute python process_streaming_yourname.py.  A few things will occur:
 - Each row from the CSV file is processed through the prepare_message_from_row function, which encodes the data into a byte format suitable for transmission over a network.
 - Data will be written to an output file (in this case, 'OUTPUT_FILE_NAME is out9.txt).  In this example, an additional flush() method was included (optionally) just as a suggestion to ensure each entry is immediatley written and can be available for other processes that may be occuring.
 - Logging will occur as the script operates and the output of this will log to streaming_log.txt in this example.
--  Error handling wil capture and log any issues that occur, specifically file not found and socket errors.  Any additional errors will be captured with 
- 
+-  Error handling wil capture and log any issues that occur, specifically file not found and socket errors.  Any additional errors will be captured with "An unexpected error occurred".
+- A sleep delay will occur between the processing for each row randomly between 1-3 seconds (random module import).  This simulates real-world streaming where data may not be sent continuously but in intervals as well. 
 
-
-
-
+Once complete, ensure that the out9.txt and streaming_log.txt files can be reviewed to ensure the source data is being correctly streamed. 
 
 -----
 
