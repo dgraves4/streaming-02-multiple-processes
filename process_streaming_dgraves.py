@@ -4,8 +4,8 @@ import time
 import random
 import logging
 
-# Configure logging to file for tracking events and errors
-logging.basicConfig(filename='streaming_log.txt', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+# Use logging module from standard library, and update the logging configuration to overwrite the old log file on each run using filemode='w'
+logging.basicConfig(filename='streaming_log.txt', filemode='w', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Constants for network communication
 HOST = "localhost"  # The IP address of the server where data will be sent
@@ -36,7 +36,7 @@ def stream_data(input_file_name, output_file_name, address_tuple):
             header = next(reader)  # Read the header row
             output_file.write(','.join(header) + '\n')  # Write the header to the output file
 
-            # Create a socket object for UDP communication
+            # Create the socket object for UDP communication
             sock_object = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
             # Read and process each row from the CSV file
@@ -55,7 +55,7 @@ def stream_data(input_file_name, output_file_name, address_tuple):
     except Exception as e:
         logging.error(f"An unexpected error occurred: {e}")  # Catch-all for any other errors
 
-if __name__ == "__main__":
-    logging.info("Starting data streaming.")
-    stream_data(INPUT_FILE_NAME, OUTPUT_FILE_NAME, ADDRESS_TUPLE)
-    logging.info("Streaming complete!")
+if __name__ == "__main__":   # If this is the script we are running (not imported as a module), then run it!
+    logging.info("Starting data streaming.")  # Log that the data streaming process has begun
+    stream_data(INPUT_FILE_NAME, OUTPUT_FILE_NAME, ADDRESS_TUPLE)  # Call the stream_data function with the specified input file, output file, and network address
+    logging.info("Streaming complete!")  # Log that streaming is complete
