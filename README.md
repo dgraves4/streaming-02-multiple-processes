@@ -96,8 +96,8 @@ Create and configure a custom script designed to stream data from a CSV file ove
 - Optionally, set up a virtual environment to manage dependencies:
 
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+py -m venv .venv
+source .venv/scripts/activate
 ```
 ### Step 2: Script Creation
 - Open VS Code or your preferred code editor.
