@@ -1,6 +1,6 @@
 # streaming-02-multiple-processes
 
-> Multiple processes accessing a shared resource concurrently
+This project showcases multiple-process streaming by providing example scripts that illustrate how multiple processes running can encounter various issues.  It also provides a custom process streaming script using an Avian Influenza csv file to simulate streaming.  The custom file also displays the use of logging and error handling. 
 
 ## Overview
 
@@ -15,6 +15,13 @@ hitting a shared database at the same time.
 1. Python 3.7+ (3.11+ preferred)
 1. VS Code Editor
 1. VS Code Extension: Python (by Microsoft)
+
+## Imports
+- csv
+- socket
+- time
+- random
+- logging (optional- can use print() functions for error handling as well)
 
 ## Task 1. Fork 
 
@@ -80,8 +87,128 @@ Use out0.txt to document the first run.
 
 Use out3.txt to document the second run.
 
+## Task 8. Create custom process streaming script
+
+Create and configure a custom script designed to stream data from a CSV file over a network and log the process:
+
+### Step 1: Set Up Your Python Environment
+- Ensure Python 3.7+ is installed on your system.
+- Optionally, set up a virtual environment to manage dependencies:
+
+```bash
+py -m venv .venv
+source .venv/scripts/activate
+```  
+
+Certainly! To adapt Task 8 based on the details of your script, I'll break down the steps further into more precise and actionable instructions, ensuring that they align closely with the specific operations and structure of your custom streaming script. This step-by-step guide will be clear and detailed, making it easier for someone to understand and implement.
+
+Revised Task 8 with Detailed Steps
+markdown
+Copy code
+## Task 8. Create Custom Process Streaming Script
+
+Create and configure a custom script designed to stream data from a CSV file over a network and log the process. Follow these detailed steps to replicate the functionality discussed:
+
+### Step 1: Set Up Your Python Environment
+- Ensure Python 3.7+ is installed on your system.
+- Optionally, set up a virtual environment to manage dependencies:
+  ```bash
+  python -m venv venv
+  source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+
+### Step 2: Script Creation
+- Open VS Code or your preferred code editor.
+- Create a new file named process_streaming_yourname.py (in this example the file is process_streaming_dgraves.py).
+
+### Step 3: Import Libraries
+```bash
+import csv
+import socket
+import time
+import random
+import logging
+```
+
+### Step 4: Configure Logging (optional- use print statements to console if preferred)
+```bash
+logging.basicConfig(filename='streaming_log.txt', filemode='w', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+```
+- Filemode='w' is optional - this would allow for the streaming log to be overwritten on subsequent runs.
+
+### Step 5: Define constants
+Specify the constants for network settings and file paths:
+
+```bash
+HOST = "localhost"  # Server IP address
+PORT = 9999         # Listening port number
+ADDRESS_TUPLE = (HOST, PORT)  # Network address
+INPUT_FILE_NAME = "AvianInfluenza.csv"  # Input CSV file
+OUTPUT_FILE_NAME = "out9.txt"  # Output file
+```
+
+### Step 6: Implement Data Handling Functions
+Create the functions that will prepare data for transmission as well as handle streaming:
+
+- Prepare message function:
+```bash
+def prepare_message_from_row(row):
+    """
+    Encodes a CSV row into a format suitable for network transmission.
+    Returns the row as a byte string.
+    """
+    return f"{','.join(row)}\n".encode()
+```
+- Stream data function (including exception and error handling logging): 
+```bash
+def stream_data(input_file_name, output_file_name, address_tuple):
+    """
+    Streams data from a CSV file to a specified network address and simultaneously writes to an output file.
+    """
+    try:
+        with open(input_file_name, "r") as input_file, open(output_file_name, "w") as output_file:
+            reader = csv.reader(input_file)
+            header = next(reader)
+            output_file.write(','.join(header) + '\n')
+            sock_object = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            for row in reader:
+                message = prepare_message_from_row(row)
+                sock_object.sendto(message, address_tuple)
+                output_file.write(','.join(row) + '\n')
+                output_file.flush()
+                time.sleep(random.uniform(1, 3))
+                logging.info(f"Sent and logged: {','.join(row)}")
+    except FileNotFoundError as e:
+        logging.error(f"File not found: {e}")
+    except socket.error as e:
+        logging.error(f"Socket error: {e}")
+    except Exception as e:
+        logging.error(f"An unexpected error occurred: {e}")
+```
+## Step 7: Execute and monitor logging
+Execute python process_streaming_yourname.py.  A few things will occur: 
+
+- Files will be opened and read (r) to prepare for streaming.
+- Each row from the CSV file is processed through the prepare_message_from_row function, which encodes the data into a byte format suitable for transmission over a network.
+- Data will be written to an output file (in this case, 'OUTPUT_FILE_NAME is out9.txt).  In this example, an additional flush() method was included (optionally) just as a suggestion to ensure each entry is immediatley written and can be available for other processes that may be occuring.
+- Logging will occur as the script operates and the output of this will log to streaming_log.txt in this example.
+-  Error handling wil capture and log any issues that occur, specifically file not found and socket errors.  Any additional errors will be captured with 
+ 
+
+
+
+
 
 -----
+
+## Ensure GitHub Commands are used for version control
+
+Throughout project when changes to scripts are made, use the following commands to push the changes to the git repository:
+
+```bash
+git add .
+git commit -m "Describe your changes here"
+git push origin main
+```
 
 ## Helpful Information
 
