@@ -5,3 +5,37 @@ This will clear the console output.
 Run the file once while the tasks are short. 
 
 Copy and paste the terminal results (when task_duration is 0) here.
+
+2024-05-08 12:52:17,417 - INFO - 
+======================================================================
+STARTING UP.............................
+  Date and Time:    2024-05-08 at 12:52 PM
+  Operating System: nt Windows 11
+  Python Version:   3.12.2
+  Path to Interpreter:  C:\Users\derek\AppData\Local\Programs\Python\Python312\python.exe
+======================================================================
+
+2024-05-08 12:52:17,417 - INFO - Called recreate_database().
+2024-05-08 12:52:17,418 - INFO - Called drop_table().
+2024-05-08 12:52:17,423 - INFO - Table 'pets' dropped successfully.
+2024-05-08 12:52:17,423 - INFO - Called create_table().
+2024-05-08 12:52:17,428 - INFO - Table 'pets' created successfully.
+2024-05-08 12:52:17,541 - INFO - Called process_three().
+2024-05-08 12:52:17,541 - INFO - Called process_two().
+2024-05-08 12:52:17,541 - INFO - Called process_one().
+2024-05-08 12:52:17,542 - INFO -   Called insert_pet() with process=P3, name=Emma, breed=Rabbit.
+2024-05-08 12:52:17,542 - INFO -   Called insert_pet() with process=P2, name=Cooper, breed=Rabbit.
+2024-05-08 12:52:17,542 - INFO -   Called insert_pet() with process=P1, name=Ace, breed=Dog.
+2024-05-08 12:52:17,546 - INFO -   Called insert_pet() with process=P2, name=Dingo, breed=Dog.
+2024-05-08 12:52:17,557 - INFO -   Called insert_pet() with process=P1, name=Buddy, breed=Dog.
+2024-05-08 12:52:17,572 - INFO -   Called insert_pet() with process=P3, name=Felix, breed=Cat.
+2024-05-08 12:52:17,611 - INFO - 
+SUCCESS: All processes successfully completed!
+
+Now - increase the task duration (representing
+      the time the task has the database
+      tied up during an insert statement).
+How well do multiple, concurrent processes share a database
+    when each task takes more time?
+How can multiple processes share a resource
+    without interfering with each other?

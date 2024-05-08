@@ -1,0 +1,22 @@
+﻿_id,Scientific_Name,Common_Name,Date,Year,Month,Day,Time,Country,Country_State_County,State,County,Locality,Latitude,Longitude,Parent_Species,target_H5_HPAI
+1,Acrocephalus scirpaceus,Eurasian Reed Warbler,2015-09-15T00:00:00,2015,9,15,1100,Ireland,IE-C-GY,Connaught,Galway,Inishmore (Inis M�r),53.1291,-9.7507,Acrocephalus scirpaceus,0
+2,Acrocephalus scirpaceus,Eurasian Reed Warbler,2015-09-15T00:00:00,2015,9,15,1100,Ireland,IE-C-GY,Connaught,Galway,Inishmore (Inis M�r),53.1291,-9.7507,Acrocephalus scirpaceus,0
+3,Limosa haemastica,Hudsonian Godwit,2015-09-15T00:00:00,2015,9,15,1100,Ireland,IE-C-GY,Connaught,Galway,Inishmore (Inis M�r),53.1291,-9.7507,Limosa haemastica,0
+4,Limosa haemastica,Hudsonian Godwit,2015-09-15T00:00:00,2015,9,15,1100,Ireland,IE-C-GY,Connaught,Galway,Inishmore (Inis M�r),53.1291,-9.7507,Limosa haemastica,0
+5,Limosa haemastica,Hudsonian Godwit,2015-09-15T00:00:00,2015,9,15,1100,Ireland,IE-C-GY,Connaught,Galway,Inishmore (Inis M�r),53.1291,-9.7507,Limosa haemastica,0
+6,Muscicapa striata,Spotted Flycatcher,2015-09-15T00:00:00,2015,9,15,1100,Ireland,IE-C-GY,Connaught,Galway,Inishmore (Inis M�r),53.1291,-9.7507,Muscicapa striata,0
+7,Larus canus,Mew Gull,2014-08-16T00:00:00,2014,8,16,930,Ireland,IE-M-KY,Munster,Kerry,Ring of Kerry.,52.0018,-10.1239,Larus canus,1
+8,Corvus frugilegus,Rook,2014-08-16T00:00:00,2014,8,16,930,Ireland,IE-M-KY,Munster,Kerry,Ring of Kerry.,52.0018,-10.1239,Corvus frugilegus,0
+9,Larus argentatus,Herring Gull,2014-08-17T00:00:00,2014,8,17,900,Ireland,IE-M-KY,Munster,Kerry,Dingle peninsula.,52.1773,-10.4411,Larus argentatus,0
+10,Corvus frugilegus,Rook,2005-06-22T00:00:00,2005,6,22,1300,Ireland,IE-M-CE,Munster,Clare,Cliffs of Moher--Doolin,53.0089,-9.3916,Corvus frugilegus,0
+11,Corvus monedula,Eurasian Jackdaw,2005-06-22T00:00:00,2005,6,22,1300,Ireland,IE-M-CE,Munster,Clare,Cliffs of Moher--Doolin,53.0089,-9.3916,Corvus monedula,0
+12,Erithacus rubecula,European Robin,2005-06-23T00:00:00,2005,6,23,700,Ireland,IE-M-CE,Munster,Clare,Callagan's B & B,53.1336,-9.0747,Erithacus rubecula,0
+13,Ardea cinerea,Gray Heron,2005-06-23T00:00:00,2005,6,23,700,Ireland,IE-M-CE,Munster,Clare,Callagan's B & B,53.1336,-9.0747,Ardea cinerea,1
+14,Corvus monedula,Eurasian Jackdaw,2005-06-23T00:00:00,2005,6,23,700,Ireland,IE-M-CE,Munster,Clare,Callagan's B & B,53.1336,-9.0747,Corvus monedula,0
+15,Cygnus olor,Mute Swan,2005-06-23T00:00:00,2005,6,23,900,Ireland,IE-M-CE,Munster,Clare,Ballyvaughan Harbour,53.1192,-9.1532,Cygnus olor,1
+16,Ardea cinerea,Gray Heron,2005-06-23T00:00:00,2005,6,23,900,Ireland,IE-M-CE,Munster,Clare,Ballyvaughan Harbour,53.1192,-9.1532,Ardea cinerea,1
+17,Cygnus olor,Mute Swan,2005-06-23T00:00:00,2005,6,23,900,Ireland,IE-M-CE,Munster,Clare,Ballyvaughan Harbour,53.1192,-9.1532,Cygnus olor,1
+18,Alca torda,Razorbill,2005-06-23T00:00:00,2005,6,23,1430,Ireland,IE-M-CE,Munster,Clare,Cliffs of Moher--Doolin,53.0089,-9.3916,Alca torda,0
+19,Motacilla cinerea,Gray Wagtail,2005-06-23T00:00:00,2005,6,23,700,Ireland,IE-M-CE,Munster,Clare,Callagan's B & B,53.1336,-9.0747,Motacilla cinerea,0
+20,Motacilla alba,White Wagtail,2005-06-23T00:00:00,2005,6,23,700,Ireland,IE-M-CE,Munster,Clare,Callagan's B & B,53.1336,-9.0747,Motacilla alba,0
+21,Erithacus rubecula,European Robin,2005-06-23T00:00:00,2005,6,23,700,Ireland,IE-M-CE,Munster,Clare,Callagan's B & B,53.1336,-9.0747,Erithacus rubecula,0
